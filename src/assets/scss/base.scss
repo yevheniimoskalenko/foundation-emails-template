@@ -1,0 +1,162 @@
+html,
+body {
+	height: 100%;
+  letter-spacing: 0.01rem;
+}
+
+body {
+	// todo: set style for body
+	//overflow-y: scroll;
+  background-color: $color-bg;
+  @media (max-width: $media-min-lg){
+    background-color: $color-very-light-gray
+  }
+}
+
+.link-more {
+  color: $color-primary;
+  font-size: .875rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-black;
+  }
+}
+
+.link {
+  color: $color-dark-gray;
+  font-size: .875rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &.link_icon {
+    position: relative;
+    padding-left: 29px;
+
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  &.link_content {
+
+    @media screen and (min-width: $media-min-sm) {
+      background-color: #ffffff;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 40px;
+      padding-right: 22px;
+      border-radius: 20px;
+
+      &:after {
+        left: 22px;
+      }
+    }
+  }
+}
+
+.link-back {
+  color: $color-space-gray;
+  font-size: .875rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  > span {
+    margin-right: 10px;
+  }
+
+  svg {
+
+    path {
+      fill: $color-space-gray;
+    }
+  }
+
+  &:hover {
+    color: $color-primary;
+
+    svg {
+
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+}
+
+.link.link_cart {
+  font-size: .75rem;
+}
+
+.no-scroll{
+  overflow: hidden;
+}
+
+.product__status-avaible{
+  color: $color-primary !important;
+}
+
+.product__status-not-avaible{
+  color: $color-space-gray !important;
+}
+
+.product__status-about-to-end{
+  color: $color-orange !important;
+}
+
+.input_checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #262626;
+    box-sizing: border-box;
+    background: white;
+  }
+
+  input:checked ~ span {
+    // background-color: #2858A2;
+    // border-color: #2858A2;
+  }
+
+  span:after {
+    content: url("./assets/img/svg/check-primary.svg");
+    position: absolute;
+    display: none;
+    top: -2px;
+    left: 2px;
+  }
+
+  input:checked ~ span:after {
+    display: block;
+  }
+}
+img {
+  text-indent: -9999px
+}
+
+.z-index-m1 {
+  z-index: -1!important;
+}
